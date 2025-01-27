@@ -65,6 +65,5 @@ Explain how to set up CI/CD for your project using Jenkins:
     - Build Steps: Add build steps to run Docker commands (e.g., `docker build`, `docker run`).
 
 Example Jenkins pipeline script:
-```groovy
 
 
