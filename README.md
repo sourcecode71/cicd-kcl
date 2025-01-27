@@ -14,7 +14,7 @@ A brief description of your project and what it does.
 
 ## Introduction
 
-Provide an introduction to your project, including key features and functionalities.
+Provided an introduction to your project, including key features and functionalities.
 
 ## Prerequisites
 
