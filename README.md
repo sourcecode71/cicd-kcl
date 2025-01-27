@@ -66,25 +66,5 @@ Explain how to set up CI/CD for your project using Jenkins:
 
 Example Jenkins pipeline script:
 ```groovy
-pipeline {
-    agent any
-    
-    stages {
-        stage('Build') {
-            steps {
-                script {
-                    docker.build('your-image-name')
-                }
-            }
-        }
-        
-        stage('Deploy') {
-            steps {
-                script {
-                    docker.run('your-image-name', '-d -p 8080:8080')
-                }
-            }
-        }
-    }
-}
+
 
