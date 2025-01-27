@@ -36,7 +36,7 @@ Step-by-step instructions to install and set up your project:
 
 2. Build the Docker image:
     ```bash
-    docker build -t your-image-name .
+    docker build -t cicd-kcl:1.
     ```
 
 3. Run the Docker container:
