@@ -23,10 +23,13 @@ pipeline {
                     sh 'docker push mostafiz51/cicd-kcl:latest'
 
                      // Stop and remove any container running on the same port
-                    sh '''
-                    docker ps -q --filter "ancestor=mostafiz51/cicd-kcl:1" | xargs -r docker stop
-                    docker ps -aq --filter "ancestor=mostafiz51/cicd-kcl:1" | xargs -r docker rm
-                    '''
+                   sh '''
+                    if lsof -i:8070; then
+                        echo "Port 8070 is in use. Stopping existing container..."
+                        docker ps -q --filter "ancestor=mostafiz51/cicd-kcl:1" | xargs -r docker stop
+                        docker ps -aq --filter "ancestor=mostafiz51/cicd-kcl:1" | xargs -r docker rm
+                    fi
+                 '''
 
                     sh 'docker run -d -p 8070:80 mostafiz51/cicd-kcl:1'
                 }
