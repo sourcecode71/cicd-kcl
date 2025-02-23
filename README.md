@@ -15,7 +15,6 @@ A brief description of your project and what it does.
 ## Introduction
 
 Provided an introduction to your project, including key features and functionalities.
-
 ## Prerequisites
 
 List the prerequisites required to run your project:
